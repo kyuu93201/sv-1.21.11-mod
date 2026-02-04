@@ -1,0 +1,361 @@
+[13:57:11] [ServerMain/INFO]: [bootstrap] Running Java 25 (OpenJDK 64-Bit Server VM 25.0.1+8-LTS; Microsoft Microsoft-12574222) on Linux 6.8.0-1030-azure (amd64)
+[13:57:11] [ServerMain/INFO]: [bootstrap] Loading Paper 1.21.11-74-main@3ebc5b3 (2026-01-02T19:02:46Z) for Minecraft 1.21.11
+[13:57:12] [ServerMain/INFO]: [PluginInitializerManager] Initializing plugins...
+[13:57:20] [ServerMain/INFO]: [PluginInitializerManager] Initialized 22 plugins
+[13:57:20] [ServerMain/INFO]: [PluginInitializerManager] Paper plugins (2):
+ - HuskHomes (4.9.10), Veinminer (2.5.3)
+[13:57:20] [ServerMain/INFO]: [PluginInitializerManager] Bukkit plugins (20):
+ - ClickMobs (1.2.7), GSit (3.1.1), Geyser-Spigot (2.9.2-SNAPSHOT), Homes (1.0), InventoryRollbackPlus (1.7.9), LagFixer (1.5.1.9 [build 140]), Multiverse-Core (5.4.0), Multiverse-Portals (5.1.1), SkinsRestorer (15.9.3), StringDupersReturn (1.0.11), TAB (5.4.0), TerraformGenerator (25.0.1), Timber (1.7.7), Tpa (2.0), UltimateTeams (4.8.6), ViaBackwards (5.7.0), ViaRewind (4.0.13), ViaVersion (5.7.0), WorldGuard (7.0.15-beta-01+445a1d7), floodgate (2.2.5-SNAPSHOT (b126-096c605))
+[13:57:27] [ServerMain/INFO]: Environment: Environment[sessionHost=https://sessionserver.mojang.com, servicesHost=https://api.minecraftservices.com, profilesHost=https://api.mojang.com, name=PROD]
+[13:57:31] [ServerMain/INFO]: Loaded 1476 recipes
+[13:57:32] [ServerMain/INFO]: Loaded 1585 advancements
+[13:57:32] [ServerMain/INFO]: [ca.spottedleaf.dataconverter.minecraft.datatypes.MCTypeRegistry] Initialising converters for DataConverter...
+[13:57:32] [ServerMain/INFO]: [ca.spottedleaf.dataconverter.minecraft.datatypes.MCTypeRegistry] Finished initialising converters for DataConverter in 738.4ms
+[13:57:32] [Server thread/INFO]: Starting minecraft server version 1.21.11
+[13:57:32] [Server thread/INFO]: Loading properties
+[13:57:33] [Server thread/INFO]: This server is running Paper version 1.21.11-74-main@3ebc5b3 (2026-01-02T19:02:46Z) (Implementing API version 1.21.11-R0.1-SNAPSHOT)
+[13:57:33] [Server thread/INFO]: [spark] This server bundles the spark profiler. For more information please visit https://docs.papermc.io/paper/profiling
+[13:57:33] [Server thread/INFO]: Server Ping Player Sample Count: 12
+[13:57:33] [Server thread/INFO]: Using 4 threads for Netty based IO
+[13:57:33] [Server thread/INFO]: [MoonriseCommon] Paper is using 1 worker threads, 1 I/O threads
+[13:57:34] [Server thread/INFO]: Default game type: SURVIVAL
+[13:57:34] [Server thread/INFO]: Generating keypair
+[13:57:34] [Server thread/INFO]: Starting Minecraft server on *:25565
+[13:57:34] [Server console handler/WARN]: [org.jline] Failed to load history
+java.lang.IllegalArgumentException: Bad history file syntax! The history file `.console_history` may be an older history: please remove it or use a different history file.
+	at org.jline.reader.impl.history.DefaultHistory.addHistoryLine(DefaultHistory.java:181) ~[jline-reader-3.20.0.jar:?]
+	at org.jline.reader.impl.history.DefaultHistory.addHistoryLine(DefaultHistory.java:165) ~[jline-reader-3.20.0.jar:?]
+	at org.jline.reader.impl.history.DefaultHistory.lambda$load$0(DefaultHistory.java:86) ~[jline-reader-3.20.0.jar:?]
+	at java.base/java.util.Iterator.forEachRemaining(Iterator.java:133) ~[?:?]
+	at java.base/java.util.Spliterators$IteratorSpliterator.forEachRemaining(Spliterators.java:1939) ~[?:?]
+	at java.base/java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:803) ~[?:?]
+	at org.jline.reader.impl.history.DefaultHistory.load(DefaultHistory.java:86) ~[jline-reader-3.20.0.jar:?]
+	at org.jline.reader.impl.history.DefaultHistory.attach(DefaultHistory.java:69) ~[jline-reader-3.20.0.jar:?]
+	at org.jline.reader.impl.LineReaderImpl.readLine(LineReaderImpl.java:603) ~[jline-reader-3.20.0.jar:?]
+	at org.jline.reader.impl.LineReaderImpl.readLine(LineReaderImpl.java:468) ~[jline-reader-3.20.0.jar:?]
+	at net.minecrell.terminalconsole.SimpleTerminalConsole.readCommands(SimpleTerminalConsole.java:158) ~[terminalconsoleappender-1.3.0.jar:?]
+	at net.minecrell.terminalconsole.SimpleTerminalConsole.start(SimpleTerminalConsole.java:141) ~[terminalconsoleappender-1.3.0.jar:?]
+	at net.minecraft.server.dedicated.DedicatedServer$1.run(DedicatedServer.java:198) ~[paper-1.21.11.jar:1.21.11-74-3ebc5b3]
+[13:57:34] [Server thread/INFO]: Paper: Using libdeflate (Linux x86_64) compression from Velocity.
+[13:57:34] [Server thread/INFO]: Paper: Using OpenSSL 3.x.x (Linux x86_64) cipher from Velocity.
+[13:57:34] [Server thread/ERROR]: [ModernPluginLoadingStrategy] Could not load 'plugins/.paper-remapped/worldguard-bukkit-7.0.15-beta-01.jar' in 'plugins/.paper-remapped'
+org.bukkit.plugin.UnknownDependencyException: Unknown/missing dependency plugins: [WorldEdit]. Please download and install these plugins to run 'WorldGuard'.
+	at io.papermc.paper.plugin.entrypoint.strategy.modern.ModernPluginLoadingStrategy.loadProviders(ModernPluginLoadingStrategy.java:82) ~[paper-1.21.11.jar:1.21.11-74-3ebc5b3]
+	at io.papermc.paper.plugin.storage.SimpleProviderStorage.enter(SimpleProviderStorage.java:38) ~[paper-1.21.11.jar:1.21.11-74-3ebc5b3]
+	at io.papermc.paper.plugin.entrypoint.LaunchEntryPointHandler.enter(LaunchEntryPointHandler.java:39) ~[paper-1.21.11.jar:1.21.11-74-3ebc5b3]
+	at org.bukkit.craftbukkit.CraftServer.loadPlugins(CraftServer.java:555) ~[paper-1.21.11.jar:1.21.11-74-3ebc5b3]
+	at net.minecraft.server.dedicated.DedicatedServer.initServer(DedicatedServer.java:320) ~[paper-1.21.11.jar:1.21.11-74-3ebc5b3]
+	at net.minecraft.server.MinecraftServer.runServer(MinecraftServer.java:1260) ~[paper-1.21.11.jar:1.21.11-74-3ebc5b3]
+	at net.minecraft.server.MinecraftServer.lambda$spin$2(MinecraftServer.java:388) ~[paper-1.21.11.jar:1.21.11-74-3ebc5b3]
+	at java.base/java.lang.Thread.run(Thread.java:1474) ~[?:?]
+[13:57:35] [Server thread/INFO]: [SpigotLibraryLoader] [UltimateTeams] Loading 7 libraries... please wait
+[13:57:36] [Server thread/INFO]: [SpigotLibraryLoader] [UltimateTeams] Loaded library /workspaces/sv-1.21.11-mod/libraries/com/mysql/mysql-connector-j/9.2.0/mysql-connector-j-9.2.0.jar
+[13:57:36] [Server thread/INFO]: [SpigotLibraryLoader] [UltimateTeams] Loaded library /workspaces/sv-1.21.11-mod/libraries/com/google/protobuf/protobuf-java/4.29.0/protobuf-java-4.29.0.jar
+[13:57:36] [Server thread/INFO]: [SpigotLibraryLoader] [UltimateTeams] Loaded library /workspaces/sv-1.21.11-mod/libraries/org/mariadb/jdbc/mariadb-java-client/3.4.1/mariadb-java-client-3.4.1.jar
+[13:57:36] [Server thread/INFO]: [SpigotLibraryLoader] [UltimateTeams] Loaded library /workspaces/sv-1.21.11-mod/libraries/com/github/waffle/waffle-jna/3.3.0/waffle-jna-3.3.0.jar
+[13:57:36] [Server thread/INFO]: [SpigotLibraryLoader] [UltimateTeams] Loaded library /workspaces/sv-1.21.11-mod/libraries/net/java/dev/jna/jna/5.13.0/jna-5.13.0.jar
+[13:57:36] [Server thread/INFO]: [SpigotLibraryLoader] [UltimateTeams] Loaded library /workspaces/sv-1.21.11-mod/libraries/net/java/dev/jna/jna-platform/5.13.0/jna-platform-5.13.0.jar
+[13:57:36] [Server thread/INFO]: [SpigotLibraryLoader] [UltimateTeams] Loaded library /workspaces/sv-1.21.11-mod/libraries/org/slf4j/jcl-over-slf4j/2.0.7/jcl-over-slf4j-2.0.7.jar
+[13:57:36] [Server thread/INFO]: [SpigotLibraryLoader] [UltimateTeams] Loaded library /workspaces/sv-1.21.11-mod/libraries/com/github/ben-manes/caffeine/caffeine/2.9.3/caffeine-2.9.3.jar
+[13:57:36] [Server thread/INFO]: [SpigotLibraryLoader] [UltimateTeams] Loaded library /workspaces/sv-1.21.11-mod/libraries/org/xerial/sqlite-jdbc/3.46.1.0/sqlite-jdbc-3.46.1.0.jar
+[13:57:36] [Server thread/INFO]: [SpigotLibraryLoader] [UltimateTeams] Loaded library /workspaces/sv-1.21.11-mod/libraries/org/slf4j/slf4j-api/1.7.36/slf4j-api-1.7.36.jar
+[13:57:36] [Server thread/INFO]: [SpigotLibraryLoader] [UltimateTeams] Loaded library /workspaces/sv-1.21.11-mod/libraries/com/h2database/h2/2.3.232/h2-2.3.232.jar
+[13:57:36] [Server thread/INFO]: [SpigotLibraryLoader] [UltimateTeams] Loaded library /workspaces/sv-1.21.11-mod/libraries/com/zaxxer/HikariCP/6.2.1/HikariCP-6.2.1.jar
+[13:57:36] [Server thread/INFO]: [SpigotLibraryLoader] [UltimateTeams] Loaded library /workspaces/sv-1.21.11-mod/libraries/org/postgresql/postgresql/42.7.3/postgresql-42.7.3.jar
+[13:57:36] [Server thread/INFO]: [SpigotLibraryLoader] [UltimateTeams] Loaded library /workspaces/sv-1.21.11-mod/libraries/org/checkerframework/checker-qual/3.42.0/checker-qual-3.42.0.jar
+[13:57:36] [Server thread/INFO]: [SpigotLibraryLoader] [UltimateTeams] Loaded library /workspaces/sv-1.21.11-mod/libraries/redis/clients/jedis/5.2.0/jedis-5.2.0.jar
+[13:57:36] [Server thread/INFO]: [SpigotLibraryLoader] [UltimateTeams] Loaded library /workspaces/sv-1.21.11-mod/libraries/org/apache/commons/commons-pool2/2.12.0/commons-pool2-2.12.0.jar
+[13:57:36] [Server thread/INFO]: [SpigotLibraryLoader] [UltimateTeams] Loaded library /workspaces/sv-1.21.11-mod/libraries/org/json/json/20240303/json-20240303.jar
+[13:57:36] [Server thread/INFO]: [SpigotLibraryLoader] [UltimateTeams] Loaded library /workspaces/sv-1.21.11-mod/libraries/com/google/code/gson/gson/2.11.0/gson-2.11.0.jar
+[13:57:36] [Server thread/INFO]: [SpigotLibraryLoader] [UltimateTeams] Loaded library /workspaces/sv-1.21.11-mod/libraries/com/google/errorprone/error_prone_annotations/2.27.0/error_prone_annotations-2.27.0.jar
+[13:57:36] [Server thread/INFO]: [SpigotLibraryLoader] [LagFixer] Loading 1 libraries... please wait
+[13:57:37] [Server thread/INFO]: [SpigotLibraryLoader] [LagFixer] Loaded library /workspaces/sv-1.21.11-mod/libraries/com/github/oshi/oshi-core/6.9.1/oshi-core-6.9.1.jar
+[13:57:37] [Server thread/INFO]: [SpigotLibraryLoader] [LagFixer] Loaded library /workspaces/sv-1.21.11-mod/libraries/net/java/dev/jna/jna/5.18.1/jna-5.18.1.jar
+[13:57:37] [Server thread/INFO]: [SpigotLibraryLoader] [LagFixer] Loaded library /workspaces/sv-1.21.11-mod/libraries/net/java/dev/jna/jna-platform/5.18.1/jna-platform-5.18.1.jar
+[13:57:37] [Server thread/INFO]: [SpigotLibraryLoader] [LagFixer] Loaded library /workspaces/sv-1.21.11-mod/libraries/org/slf4j/slf4j-api/2.0.17/slf4j-api-2.0.17.jar
+[13:57:37] [Server thread/INFO]: [ViaVersion] Loading server plugin ViaVersion v5.7.0
+[13:57:37] [Server thread/INFO]: [ViaVersion] ViaVersion 5.7.0 is now loaded. Registering protocol transformers and injecting...
+[13:57:37] [Via-Mappingloader-1/INFO]: [ViaVersion] Loading block connection mappings ...
+[13:57:38] [Via-Mappingloader-1/INFO]: [ViaVersion] Using FastUtil Long2ObjectOpenHashMap for block connections
+[13:57:38] [Server thread/INFO]: [ViaBackwards] Loading translations...
+[13:57:38] [Server thread/INFO]: [ViaBackwards] Registering protocols...
+[13:57:39] [Server thread/INFO]: [ViaRewind] Registering protocols...
+[13:57:39] [Server thread/INFO]: [ViaBackwards] Loading server plugin ViaBackwards v5.7.0
+[13:57:39] [Server thread/INFO]: [floodgate] Loading server plugin floodgate v2.2.5-SNAPSHOT (b126-096c605)
+[13:57:40] [Server thread/WARN]: [floodgate] en_ is not a supported Floodgate language.
+[13:57:40] [Server thread/INFO]: [floodgate] Took 859ms to boot Floodgate
+[13:57:40] [Server thread/INFO]: [HuskHomes] Loading server plugin HuskHomes v4.9.10
+[13:57:40] [Server thread/INFO]: [HuskHomes] Registered 'on_load' hooks
+[13:57:40] [Server thread/INFO]: [HuskHomes] Successfully loaded HuskHomes v4.9.10
+[13:57:40] [Server thread/INFO]: [CoreLogging] Loading server plugin Multiverse-Core v5.4.0
+[13:57:40] [Server thread/INFO]: [ViaRewind] Loading server plugin ViaRewind v4.0.13
+[13:57:40] [Server thread/INFO]: [UltimateTeams] Loading server plugin UltimateTeams v4.8.6
+[13:57:40] [Server thread/INFO]: [GSit] Loading server plugin GSit v3.1.1
+[13:57:40] [Server thread/INFO]: [ClickMobs] Loading server plugin ClickMobs v1.2.7
+[13:57:40] [Server thread/INFO]: [SkinsRestorer] Loading server plugin SkinsRestorer v15.9.3
+[13:57:40] [Server thread/INFO]: [Veinminer] Loading server plugin Veinminer v2.5.3
+[13:57:40] [Server thread/INFO]: [Veinminer] Detected platform: Paper
+[13:57:41] [Server thread/INFO]: [Multiverse-Portals] Loading server plugin Multiverse-Portals v5.1.1
+[13:57:41] [Server thread/INFO]: [TerraformGenerator] Loading server plugin TerraformGenerator v25.0.1
+[13:57:41] [Server thread/INFO]: [Timber] Loading server plugin Timber v1.7.7
+[13:57:41] [Server thread/INFO]: [Homes] Loading server plugin Homes v1.0
+[13:57:41] [Server thread/INFO]: [InventoryRollbackPlus] Loading server plugin InventoryRollbackPlus v1.7.9
+[13:57:41] [Server thread/INFO]: [Geyser-Spigot] Loading server plugin Geyser-Spigot v2.9.2-SNAPSHOT
+[13:57:41] [Server thread/INFO]: [Geyser-Spigot] Loading extensions...
+[13:57:41] [Server thread/INFO]: [Geyser-Spigot] Loaded 0 extension(s)
+[13:57:41] [Server thread/INFO]: [[38;5;11m⚡[0m] Loading server plugin LagFixer v1.5.1.9 [build 140]
+[13:57:41] [Server thread/INFO]: [StringDupersReturn] Loading server plugin StringDupersReturn v1.0.11
+[13:57:41] [Server thread/INFO]: [TAB] Loading server plugin TAB v5.4.0
+[13:57:41] [Server thread/INFO]: [Tpa] Loading server plugin Tpa v2.0
+[13:57:41] [Server thread/INFO]: Server permissions file permissions.yml is empty, ignoring it
+[13:57:41] [Server thread/INFO]: [ViaRewind] Enabling ViaRewind v4.0.13
+[13:57:41] [Server thread/INFO]: [SkinsRestorer] Enabling SkinsRestorer v15.9.3
+[13:57:42] [Server thread/INFO]: [SkinsRestorer] Running on Minecraft 1.21.11.
+[13:57:43] [Server thread/INFO]: [SkinsRestorer] Floodgate skin listener registered
+[13:57:43] [Server thread/INFO]: [SkinsRestorer] Using paper join listener!
+[13:57:43] [Server thread/INFO]: [Veinminer] Enabling Veinminer v2.5.3
+[13:57:43] [Folia Async Scheduler Thread #1/INFO]: [SkinsRestorer] ----------------------------------------------
+[13:57:43] [Folia Async Scheduler Thread #1/INFO]: [SkinsRestorer]     +==================+
+[13:57:43] [Folia Async Scheduler Thread #1/INFO]: [SkinsRestorer]     |   SkinsRestorer  |
+[13:57:43] [Folia Async Scheduler Thread #1/INFO]: [SkinsRestorer]     |------------------|
+[13:57:43] [Folia Async Scheduler Thread #1/INFO]: [SkinsRestorer]     |  Standalone Mode |
+[13:57:43] [Folia Async Scheduler Thread #1/INFO]: [SkinsRestorer]     +==================+
+[13:57:43] [Folia Async Scheduler Thread #1/INFO]: [SkinsRestorer] ----------------------------------------------
+[13:57:43] [Folia Async Scheduler Thread #1/INFO]: [SkinsRestorer]     Version: 15.9.3
+[13:57:43] [Folia Async Scheduler Thread #1/INFO]: [SkinsRestorer]     Commit: 989bf18
+[13:57:43] [Folia Async Scheduler Thread #1/INFO]: [SkinsRestorer]     This is the latest version!
+[13:57:43] [Folia Async Scheduler Thread #1/INFO]: [SkinsRestorer] ----------------------------------------------
+[13:57:43] [Folia Async Scheduler Thread #1/INFO]: [SkinsRestorer] Do you have issues? Read our troubleshooting guide: https://skinsrestorer.net/docs/troubleshooting
+[13:57:43] [Folia Async Scheduler Thread #1/INFO]: [SkinsRestorer] Want to support SkinsRestorer? Consider donating: https://skinsrestorer.net/donate
+[13:57:43] [Server thread/INFO]: [TerraformGenerator] Enabling TerraformGenerator v25.0.1
+[13:57:43] [Server thread/INFO]: [TerraformGenerator] Custom Logger Initialized
+[13:57:43] [DefaultDispatcher-worker-1/INFO]: [VeinminerUpdater] veinminer is up to date
+[13:57:44] [Server thread/INFO]: [TerraformGenerator] bStats Metrics enabled.
+[13:57:44] [Server thread/INFO]: [TerraformGenerator] Detected version: v1_21_R7, packName: v1_21_R7
+[13:57:44] [Server thread/WARN]: **** SERVER IS RUNNING IN OFFLINE/INSECURE MODE!
+[13:57:44] [Server thread/WARN]: The server will make no attempt to authenticate usernames. Beware.
+[13:57:44] [Server thread/WARN]: While this makes the game possible to play without internet access, it also opens up the ability for hackers to connect with any username they choose.
+[13:57:44] [Server thread/WARN]: To change this, set "online-mode" to "true" in the server.properties file.
+[13:57:44] [Server thread/INFO]: Preparing level "world"
+[13:57:44] [Server thread/INFO]: [ca.spottedleaf.moonrise.common.util.MoonriseConstants] NUMA enable flag is not set; however there is NUMA interaction support for this OS.
+[13:57:44] [Server thread/INFO]: [ca.spottedleaf.moonrise.common.util.MoonriseConstants] Detected 1 NUMA nodes.
+[13:57:46] [Server thread/INFO]: Loading 0 persistent chunks for world 'minecraft:overworld'...
+[13:57:46] [Server thread/INFO]: Preparing spawn area: 100%
+[13:57:46] [Server thread/INFO]: Prepared spawn area in 5 ms
+[13:57:46] [Server thread/INFO]: Loading 0 persistent chunks for world 'minecraft:the_nether'...
+[13:57:46] [Server thread/INFO]: Preparing spawn area: 100%
+[13:57:46] [Server thread/INFO]: Prepared spawn area in 4 ms
+[13:57:46] [Server thread/INFO]: Loading 0 persistent chunks for world 'minecraft:the_end'...
+[13:57:46] [Server thread/INFO]: Prepared spawn area in 4 ms
+[13:57:46] [Server thread/INFO]: Done preparing level "world" (1.724s)
+[13:57:46] [Server thread/INFO]: [ViaVersion] Enabling ViaVersion v5.7.0
+[13:57:46] [Server thread/INFO]: [ViaVersion] ViaVersion detected server version: 1.21.11 (774)
+[13:57:46] [Server thread/INFO]: [ViaBackwards] Enabling ViaBackwards v5.7.0
+[13:57:46] [Server thread/INFO]: [floodgate] Enabling floodgate v2.2.5-SNAPSHOT (b126-096c605)
+[13:57:47] [Server thread/INFO]: [HuskHomes] Enabling HuskHomes v4.9.10
+[13:57:47] [Server thread/INFO]: [HuskHomes] Registered 'on_enable' hooks
+[13:57:47] [Server thread/INFO]: [HuskHomes] Successfully enabled HuskHomes v4.9.10
+[13:57:47] [Server thread/INFO]: [Multiverse-Core] Enabling Multiverse-Core v5.4.0
+[13:57:49] [Server thread/INFO]: [Multiverse-Core] API service loaded!
+[13:57:49] [Server thread/INFO]: [Multiverse-Core] Version 5.4.0 (API v5.4) Enabled - By dumptruckman, Rigby, fernferret, lithium3141, main--, benwoo1110 and Zax71
+[13:57:49] [Server thread/INFO]: [Multiverse-Core] Loving Multiverse-Core? Please consider supporting the project with a small donation: https://github.com/sponsors/Multiverse
+[13:57:49] [Server thread/INFO]: [UltimateTeams] Enabling UltimateTeams v4.8.6
+[13:57:49] [Server thread/INFO]: [UltimateTeams] [ACF] Enabled Asynchronous Tab Completion Support!
+[13:57:49] [Server thread/INFO]: [UltimateTeams] Initializing plugin config & locale files...
+[13:57:49] [Server thread/INFO]: [UltimateTeams] Successfully initialized plugin config & locale files
+[13:57:49] [Server thread/INFO]: [UltimateTeams] Initializing SQLite database connection...
+[13:57:50] [Server thread/INFO]: [UltimateTeams] Database tables created
+[13:57:50] [Server thread/INFO]: [UltimateTeams] Successfully initialized SQLite database connection
+[13:57:50] [Server thread/INFO]: [UltimateTeams] Initializing commands...
+[13:57:50] [Server thread/INFO]: [UltimateTeams] Successfully initialized commands
+[13:57:50] [Server thread/INFO]: [UltimateTeams] Initializing events...
+[13:57:50] [Server thread/INFO]: [UltimateTeams] Successfully initialized events
+[13:57:50] [Server thread/INFO]: [UltimateTeams] Initializing teams...
+[13:57:50] [Server thread/INFO]: [UltimateTeams] Successfully initialized teams
+[13:57:50] [Server thread/INFO]: [UltimateTeams] Initializing ender chest backup manager...
+[13:57:50] [Server thread/INFO]: [UltimateTeams] Loaded 0 ender chest backup entries.
+[13:57:50] [Server thread/INFO]: [UltimateTeams] Successfully initialized ender chest backup manager
+[13:57:50] [Server thread/INFO]: -------------------------------------------
+[13:57:50] [Server thread/INFO]: UltimateTeams: PlaceholderAPI not found!
+[13:57:50] [Server thread/INFO]: UltimateTeams: External placeholders disabled!
+[13:57:50] [Server thread/INFO]: -------------------------------------------
+[13:57:50] [Server thread/INFO]: -------------------------------------------
+[13:57:50] [Server thread/INFO]: UltimateTeams: FloodgateApi not found/feature disabled!
+[13:57:50] [Server thread/INFO]: UltimateTeams: Bedrock support won't work!
+[13:57:50] [Server thread/INFO]: -------------------------------------------
+[13:57:50] [Server thread/INFO]: [UltimateTeams] Initializing metrics...
+[13:57:50] [Server thread/INFO]: [UltimateTeams] Successfully initialized metrics
+[13:57:50] [Server thread/INFO]: -------------------------------------------
+[13:57:50] [Server thread/INFO]: UltimateTeams: Plugin by: xF3d3
+[13:57:50] [Server thread/INFO]: UltimateTeams: Contributors: dei0 (TeamEnderChest)
+[13:57:50] [Server thread/INFO]: UltimateTeams: Version: 4.8.6
+[13:57:50] [Server thread/INFO]: UltimateTeams: Successfully enabled!
+[13:57:50] [Server thread/INFO]: -------------------------------------------
+[13:57:50] [Server thread/INFO]: [GSit] Enabling GSit v3.1.1
+[13:57:50] [Server thread/INFO]: [GSit] The plugin was successfully enabled.
+[13:57:50] [Server thread/INFO]: [ClickMobs] Enabling ClickMobs v1.2.7
+[13:57:50] [Server thread/INFO]: [ClickMobs] Checking for updates...
+[13:57:50] [Server thread/INFO]: [Multiverse-Portals] Enabling Multiverse-Portals v5.1.1
+[13:57:50] [ForkJoinPool.commonPool-worker-1/WARN]: [UltimateTeams] A new version of UltimateTeams is available: v4.8.7 (running v4.8.6)
+[13:57:51] [Server thread/INFO]: [Multiverse-Portals] 0 - Portals(s) loaded
+[13:57:51] [Server thread/INFO]: [Multiverse-Portals 5.1.1]  Enabled - By Rigby, fernferret and benwoo1110
+[13:57:51] [Server thread/INFO]: [Timber] Enabling Timber v1.7.7
+[13:57:51] [Server thread/WARN]: LogBlock isn't injected! 
+[13:57:51] [Server thread/WARN]: Install the plugin to improve tree detection 
+[13:57:51] [Server thread/WARN]: Download link: https://www.curseforge.com/minecraft/bukkit-plugins/logblocks 
+[13:57:52] [Server thread/INFO]: 
+	Plugin [Timber] Update Available
+	Your version: 1.7.7 | Latest: 1.8.0
+	Download: https://modrinth.com/plugin/treetimber
+[13:57:52] [Server thread/INFO]: [Homes] Enabling Homes v1.0
+[13:57:52] [Server thread/INFO]: [Homes] §aLoaded homes for 0 players.
+[13:57:52] [Server thread/INFO]: [Homes] §aHomes plugin enabled!
+[13:57:52] [Server thread/INFO]: [InventoryRollbackPlus] Enabling InventoryRollbackPlus v1.7.9
+[13:57:52] [Server thread/INFO]: [InventoryRollbackPlus] Attempting support for version: 1.21.11-74-3ebc5b3 (MC: 1.21.11)
+[13:57:52] [Server thread/INFO]: [InventoryRollbackPlus] Using CraftBukkit version: v1_21_R8
+[13:57:52] [Server thread/INFO]: [InventoryRollbackPlus] Inventory backup data is set to save to: YAML
+[13:57:52] [Server thread/INFO]: [InventoryRollbackPlus] bStats are enabled
+[13:57:52] [Server thread/INFO]: [InventoryRollbackPlus] Tests completed: 5, Skipped: 0, Failed: 0
+[13:57:52] [Server thread/INFO]: [InventoryRollbackPlus] All tests passed successfully.
+[13:57:52] [Server thread/INFO]: [Geyser-Spigot] Enabling Geyser-Spigot v2.9.2-SNAPSHOT
+[13:57:55] [Server thread/INFO]: [[38;5;11m⚡[0m] Enabling LagFixer v1.5.1.9 [build 140]
+[13:57:55] [Server thread/INFO]: [[38;5;11m⚡[0m] Remember to leave a rating! ★ ★ ★ ★ ★
+
+
+
+
+
+LagFixer 1.5.1.9 [build 140] - Best Performance Solution!
+░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+░██╗░░░░░░█████╗░░██████╗░░░███████╗██╗██╗░░██╗███████╗██████╗░░
+░██║░░░░░██╔══██╗██╔════╝░░░██╔════╝██║╚██╗██╔╝██╔════╝██╔══██╗░
+░██║░░░░░███████║██║░░██╗░░░█████╗░░██║░╚███╔╝░█████╗░░██████╔╝░
+░██║░░░░░██╔══██║██║░░╚██╗░░██╔══╝░░██║░██╔██╗░██╔══╝░░██╔══██╗░
+░███████╗██║░░██║╚██████╔╝░░██║░░░░░██║██╔╝╚██╗███████╗██║░░██║░
+░╚══════╝╚═╝░░╚═╝░╚═════╝░░░╚═╝░░░░░╚═╝╚═╝░░╚═╝╚══════╝╚═╝░░╚═╝░
+░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+
+
+
+
+
+[13:57:55] [Server thread/INFO]: [[38;5;11m⚡[0m] (ErrorsManager) -> Enabling manager...
+[13:57:55] [Server thread/INFO]: [[38;5;11m⚡[0m]  • Started listening console for LagFixer errors!
+[13:57:55] [Server thread/INFO]: [[38;5;11m⚡[0m] (ErrorsManager) -> Enabled manager in 4ms!
+[13:57:55] [Server thread/INFO]: [[38;5;11m⚡[0m] (ConfigManager) -> Enabling manager...
+[13:57:55] [Server thread/INFO]: [[38;5;11m⚡[0m] (ConfigManager) -> Enabled manager in 167ms!
+[13:57:55] [Server thread/INFO]: [[38;5;11m⚡[0m] (SupportManager) -> Enabling manager...
+[13:57:55] [Server thread/INFO]: [[38;5;11m⚡[0m]  • Loaded fork support ~ xyz.lychee.lagfixer.support.PaperSupport
+[13:57:55] [Server thread/INFO]: [[38;5;11m⚡[0m]  • Loaded nms support ~ xyz.lychee.lagfixer.nms.v1_21_R7.SupportNms
+[13:57:55] [Server thread/INFO]: [[38;5;11m⚡[0m] (SupportManager) -> Enabled manager in 13ms!
+[13:57:55] [Server thread/INFO]: [[38;5;11m⚡[0m] (HookManager) -> Enabling manager...
+[13:57:55] [Server thread/INFO]: [[38;5;11m⚡[0m] (HookManager) -> Enabled manager in 0ms!
+[13:57:55] [Server thread/INFO]: [[38;5;11m⚡[0m] (MetricsManager) -> Enabling manager...
+[13:57:55] [Server thread/INFO]: [[38;5;11m⚡[0m] (MetricsManager) -> Enabled manager in 7ms!
+[13:57:55] [Server thread/INFO]: [[38;5;11m⚡[0m] (UpdaterManager) -> Enabling manager...
+[13:57:55] [Server thread/INFO]: [[38;5;11m⚡[0m] (UpdaterManager) -> Enabled manager in 5ms!
+[13:57:55] [Server thread/INFO]: Environment: Environment[sessionHost=https://sessionserver.mojang.com, servicesHost=https://api.minecraftservices.com, profilesHost=https://api.mojang.com, name=PROD]
+[13:57:56] [Server thread/INFO]: [[38;5;11m⚡[0m] (ModuleManager) -> Enabling manager...
+[13:57:56] [Server thread/INFO]: [[38;5;11m⚡[0m]  • Successfully loaded module RedstoneLimiter in 9ms.
+[13:57:56] [Server thread/INFO]: [[38;5;11m⚡[0m]  • Successfully loaded module InstantLeafDecay in 4ms.
+[13:57:56] [Server thread/INFO]: [[38;5;11m⚡[0m]  • Successfully loaded module WorldCleaner in 8ms.
+[13:57:56] [Server thread/INFO]: [[38;5;11m⚡[0m]  • Successfully loaded module LagShield in 13ms.
+[13:57:56] [Server thread/INFO]: [[38;5;11m⚡[0m]  • Successfully loaded module ExplosionOptimizer in 6ms.
+[13:57:56] [Server thread/INFO]: [[38;5;11m⚡[0m]  • Successfully loaded module MobAiReducer in 26ms.
+[13:57:56] [Server thread/INFO]: [[38;5;11m⚡[0m]  • Successfully loaded module EntityLimiter in 11ms.
+[13:57:56] [Server thread/INFO]: [[38;5;11m⚡[0m]  • Successfully loaded module AbilityLimiter in 6ms.
+[13:57:56] [Server thread/INFO]: [[38;5;11m⚡[0m] (ModuleManager) -> Enabled manager in 216ms!
+[13:57:56] [Server thread/INFO]: [[38;5;11m⚡[0m] (CommandManager) -> Enabling manager...
+[13:57:56] [Server thread/INFO]: [[38;5;11m⚡[0m] (CommandManager) -> Enabled manager in 684ms!
+[13:57:56] [Server thread/INFO]: [[38;5;11m⚡[0m] Remember to leave a rating! ★ ★ ★ ★ ★
+[13:57:56] [Server thread/INFO]: [[38;5;11m⚡[0m] ❤ Support us https://ko-fi.com/lajczik
+[13:57:56] [Server thread/INFO]: [StringDupersReturn] Enabling StringDupersReturn v1.0.11
+[13:57:56] [Server thread/INFO]: [TAB] Enabling TAB v5.4.0
+[13:57:57] [Server thread/INFO]: [TAB] Enabled in 540ms
+[13:57:57] [Server thread/INFO]: [Tpa] Enabling Tpa v2.0
+[13:57:57] [Server thread/INFO]: [Tpa] TPA Plugin has been enabled! (Minecraft 1.21+)
+[13:57:57] [Server thread/INFO]: [spark] Starting background profiler...
+[13:57:59] [Server thread/INFO]: [Geyser-Spigot] ******************************************
+[13:57:59] [Server thread/INFO]: [Geyser-Spigot] 
+[13:57:59] [Server thread/INFO]: [Geyser-Spigot] Loading Geyser version 2.9.2-b1015 (git-master-3332528)
+[13:57:59] [Server thread/INFO]: [Geyser-Spigot] 
+[13:57:59] [Server thread/INFO]: [Geyser-Spigot] ******************************************
+[13:58:04] [GeyserServer-3-1/INFO]: [Geyser-Spigot] Started Geyser on UDP port 19132
+[13:58:04] [Server thread/INFO]: [Geyser-Spigot] Done (5.743s)! Run /geyser help for help!
+[13:58:05] [Server thread/INFO]: Running delayed init tasks
+[13:58:05] [Craft Scheduler Thread - 6 - UltimateTeams/INFO]: [UltimateTeams] Creating automatic ender chest backups...
+[13:58:05] [Craft Scheduler Thread - 7 - UltimateTeams/INFO]: Loaded 0 teams!
+[13:58:05] [Craft Scheduler Thread - 5 - ViaVersion/INFO]: [ViaVersion] Finished mapping loading, shutting down loader executor.
+[13:58:05] [Craft Scheduler Thread - 5 - InventoryRollbackPlus/INFO]: [InventoryRollbackPlus] Checking for updates...
+[13:58:05] [Craft Scheduler Thread - 6 - UltimateTeams/INFO]: [UltimateTeams] Automatic ender chest backups completed.
+[13:58:05] [Server thread/INFO]: UltimateTeams: Cleared all outstanding team invites!
+[13:58:05] [Server thread/INFO]: Done (55.617s)! For help, type "help"
+[13:58:05] [Craft Scheduler Thread - 5 - InventoryRollbackPlus/INFO]: [InventoryRollbackPlus] You are running the latest version.
+[13:58:05] [Server thread/WARN]: [ViaVersion] There is a newer plugin version available: 5.7.1, you're on: 5.7.0
+[13:58:05] [Paper Async Task Handler Thread - 1/INFO]: *** Currently you are 25 build(s) behind ***
+[13:58:05] [Paper Async Task Handler Thread - 1/INFO]: *** It is highly recommended to download the latest build from https://papermc.io/downloads/paper ***
+[13:58:10] [Craft Scheduler Thread - 8 - HuskHomes/INFO]: [HuskHomes] Registered 'after_load' hooks
+[13:58:35] [User Authenticator #0/INFO]: UUID of player Kandy_Minecraft is a409d161-ff6d-38e5-85b4-3e450ad4c5fd
+[13:58:39] [Server thread/INFO]: Kandy_Minecraft joined the game
+[13:58:39] [TAB Processing Thread/INFO]: [TAB] [WARN] Player Kandy_Minecraft's group (none) is not in sorting list! Sorting list: owner,admin,mod,helper,builder,vip,default. Player will be sorted on the bottom.
+[13:58:39] [Server thread/INFO]: Kandy_Minecraft[/127.13.225.27:36453] logged in with entity id 40 at ([world]50.104639579612744, 67.0, 112.01831528715266)
+[13:59:02] [Server thread/INFO]: [Not Secure] [Server] gay
+[13:59:10] [Server thread/INFO]: [Not Secure] [Server] gay
+[13:59:16] [Server thread/INFO]: [Not Secure] [Server] kandy gay
+[14:00:44] [Async Chat Thread - #2/INFO]: [Not Secure] <Kandy_Minecraft> despam r
+[14:02:46] [Server thread/INFO]: [Not Secure] [Server] oh noo
+[14:03:10] [Server thread/INFO]: [Not Secure] [Server] t xoa plugin fixlag vs anticheat r
+[14:03:29] [Async Chat Thread - #3/INFO]: [Not Secure] <Kandy_Minecraft> nhung van despam dc ma
+[14:03:31] [Server thread/ERROR]: Entity threw exception at world:171.5,-5.0,405.5
+java.lang.NullPointerException: Cannot invoke "net.minecraft.world.entity.ai.goal.WrappedGoal.isRunning()" because "wrappedGoalx" is null
+	at net.minecraft.world.entity.ai.goal.GoalSelector.tick(GoalSelector.java:100) ~[paper-1.21.11.jar:1.21.11-74-3ebc5b3]
+	at net.minecraft.world.entity.Mob.serverAiStep(Mob.java:823) ~[paper-1.21.11.jar:1.21.11-74-3ebc5b3]
+	at net.minecraft.world.entity.LivingEntity.aiStep(LivingEntity.java:3659) ~[paper-1.21.11.jar:1.21.11-74-3ebc5b3]
+	at net.minecraft.world.entity.Mob.aiStep(Mob.java:522) ~[paper-1.21.11.jar:1.21.11-74-3ebc5b3]
+	at net.minecraft.world.entity.monster.Monster.aiStep(Monster.java:46) ~[paper-1.21.11.jar:1.21.11-74-3ebc5b3]
+	at net.minecraft.world.entity.LivingEntity.tick(LivingEntity.java:3382) ~[paper-1.21.11.jar:1.21.11-74-3ebc5b3]
+	at net.minecraft.world.entity.Mob.tick(Mob.java:389) ~[paper-1.21.11.jar:1.21.11-74-3ebc5b3]
+	at net.minecraft.world.entity.monster.zombie.Zombie.tick(Zombie.java:232) ~[paper-1.21.11.jar:1.21.11-74-3ebc5b3]
+	at net.minecraft.server.level.ServerLevel.tickNonPassenger(ServerLevel.java:1354) ~[paper-1.21.11.jar:1.21.11-74-3ebc5b3]
+	at net.minecraft.world.level.Level.guardEntityTick(Level.java:1429) ~[paper-1.21.11.jar:1.21.11-74-3ebc5b3]
+	at net.minecraft.server.level.ServerLevel.lambda$tick$4(ServerLevel.java:854) ~[paper-1.21.11.jar:1.21.11-74-3ebc5b3]
+	at net.minecraft.world.level.entity.EntityTickList.forEach(EntityTickList.java:39) ~[paper-1.21.11.jar:1.21.11-74-3ebc5b3]
+	at net.minecraft.server.level.ServerLevel.tick(ServerLevel.java:836) ~[paper-1.21.11.jar:1.21.11-74-3ebc5b3]
+	at net.minecraft.server.MinecraftServer.tickChildren(MinecraftServer.java:1826) ~[paper-1.21.11.jar:1.21.11-74-3ebc5b3]
+	at net.minecraft.server.MinecraftServer.tickServer(MinecraftServer.java:1618) ~[paper-1.21.11.jar:1.21.11-74-3ebc5b3]
+	at net.minecraft.server.dedicated.DedicatedServer.tickServer(DedicatedServer.java:427) ~[paper-1.21.11.jar:1.21.11-74-3ebc5b3]
+	at net.minecraft.server.MinecraftServer.processPacketsAndTick(MinecraftServer.java:1674) ~[paper-1.21.11.jar:1.21.11-74-3ebc5b3]
+	at net.minecraft.server.MinecraftServer.runServer(MinecraftServer.java:1342) ~[paper-1.21.11.jar:1.21.11-74-3ebc5b3]
+	at net.minecraft.server.MinecraftServer.lambda$spin$2(MinecraftServer.java:388) ~[paper-1.21.11.jar:1.21.11-74-3ebc5b3]
+	at java.base/java.lang.Thread.run(Thread.java:1474) ~[?:?]
+[14:04:15] [Server thread/INFO]: [Not Secure] [Server] hom qua ms xoa
+[14:04:33] [Server thread/INFO]: [Not Secure] [Server] dang tai lai minecraft
+[14:04:43] [Server thread/ERROR]: Entity threw exception at world:308.5,-12.0,490.5
+java.lang.NullPointerException
+[14:04:48] [Server thread/INFO]: [Not Secure] [Server] vo discord
+[14:05:05] [Async Chat Thread - #3/INFO]: [Not Secure] <Kandy_Minecraft> thoi nha on lam
+[14:05:10] [Server thread/INFO]: [Not Secure] [Server] ok
+[14:05:17] [Async Chat Thread - #3/INFO]: [Not Secure] <Kandy_Minecraft> CUU HONG
+[14:05:26] [Server thread/INFO]: [Not Secure] [Server] bat no lai
+[14:05:29] [Async Chat Thread - #3/INFO]: [Not Secure] <Kandy_Minecraft> CUU HONG TU NHIEN
+[14:05:37] [Server thread/INFO]: [Not Secure] [Server] nhat no len
+[14:05:56] [Server thread/ERROR]: Entity threw exception at world:289.5,22.0,522.5
+java.lang.NullPointerException
+[14:06:14] [Async Chat Thread - #5/INFO]: [Not Secure] <Kandy_Minecraft> thoi of
+[14:06:41] [Async Chat Thread - #5/INFO]: [Not Secure] <Kandy_Minecraft> di danh co lien minhj
+[14:06:42] [Server thread/INFO]: Kandy_Minecraft lost connection: Disconnected
+[14:06:42] [Server thread/INFO]: Kandy_Minecraft left the game
+[14:07:09] [User Authenticator #1/INFO]: UUID of player kyuu93201 is b2daeaba-0057-37e3-9540-17b70ad1be8d
+[14:07:13] [TAB Processing Thread/INFO]: [TAB] [WARN] Player kyuu93201's group (none) is not in sorting list! Sorting list: owner,admin,mod,helper,builder,vip,default. Player will be sorted on the bottom.
+[14:07:13] [Server thread/INFO]: kyuu93201 joined the game
+[14:07:13] [Server thread/INFO]: kyuu93201[/127.59.56.240:55459] logged in with entity id 2096 at ([world]-255.69999998807907, 179.0, 47.67365880254162)
+[14:07:37] [Server thread/INFO]: kyuu93201 issued server command: /home farm
+[14:07:42] [Server thread/ERROR]: Entity threw exception at world:-264.5,205.0,39.5
+java.lang.NullPointerException
+[14:07:46] [Server thread/INFO]: kyuu93201 lost connection: Disconnected
+[14:07:46] [Server thread/INFO]: kyuu93201 left the game
+[14:08:06] [Server thread/INFO]: UltimateTeams: Cleared all outstanding team invites!
+[14:18:06] [Server thread/INFO]: UltimateTeams: Cleared all outstanding team invites!
+[14:28:06] [Server thread/INFO]: UltimateTeams: Cleared all outstanding team invites!
+[14:28:06] [Craft Scheduler Thread - 53 - UltimateTeams/INFO]: [UltimateTeams] Creating automatic ender chest backups...
+[14:28:06] [Craft Scheduler Thread - 53 - UltimateTeams/INFO]: [UltimateTeams] Automatic ender chest backups completed.

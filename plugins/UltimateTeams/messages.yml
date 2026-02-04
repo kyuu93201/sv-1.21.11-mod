@@ -1,0 +1,401 @@
+team:
+  create:
+    # #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+    # #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+    # #                                   ----[UltimateTeams]----                                         #
+    # #                                     ----[By xF3d3]----                                            #
+    # #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+    # #                                  ----[Plugin Messages File]----                                   #
+    # #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+    # #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+    # 
+    # You can use MineDown: https://github.com/Phoenix616/MineDown?tab=readme-ov-file#syntax
+    # You can use \n anywhere to go to a new line.
+    # 
+    # You can also use Hex colors anywhere in the messages (#ffffffWHITE)
+    # 
+    # Team Creation Messages
+    incorrect-usage: '&3use /team create <name>.'
+    name-too-short: '&3Team name too short - minimum length is &6%CHARMIN% &3characters.'
+    name-too-long: '&3Team name too long - maximum length is &6%CHARMAX% &3characters.'
+    successful: '&3Team &6%TEAM% &3was Created!'
+    name-taken: |-
+      &3Sorry but &6%TEAM% &3is already taken.
+      &3Please choose another!
+    name-banned: |-
+      &3Sorry but &6%TEAM% &3is a &cBANNED &3name!
+      &3Please choose another!
+    name-contains-space: |-
+      &3Sorry but, since it contains a space, &6%TEAM% &3is a &cBANNED &3name!
+      &3Please choose another!
+    name-cannot-contain-colours: '&3Sorry, the team name cannot contain ''&'' or ''#'' characters.'
+    failed: '&3Team &6%TEAM% &3was NOT created, please make sure you''re not already in a team!'
+    broadcast-chat: |-
+      &6%TEAMOWNER%&3 Created a new team!
+      &3The new team is called &6%TEAM%&3!
+    broadcast-title-1: '&6%TEAMOWNER%&3 Created a new team!'
+    broadcast-title-2: '&3The new team is called &6%TEAM%&3!'
+  rename:
+    # Team Rename
+    successful: '&3Successfully changed team name to &6%TEAM%&3!'
+  disband:
+    # Team Disbanded Messages
+    warning: '&3If you''re sure you want to delete your team type: &6/team disband confirm&3. &cThis action cannot be undone!'
+    successful: '&3Team was disbanded!'
+    failure: '&3Failed to disband team - Please make sure you''re the owner!'
+  transfer:
+    # Team Transfer Ownership Messages
+    successful: '&3You successfully transferred your team to &6%PLAYER%&3.'
+    new-owner-message: '&3You are now the owner of &6%TEAM%.'
+    failure-not-same-team: '&3Failed to transfer team ownership as the player is not in your team.'
+    failure-owner-offline: |-
+      &3Failed to transfer team ownership to &6%PLAYER%&3!
+      &3They may be offline.
+    failed-cannot-transfer-to-self: |-
+      &3Failed to transfer team ownership to &6%PLAYER%!
+      &3The specified player cannot be yourself!
+    failed-target-in-team: '&3Failed to transfer team as the target is already in/owns a team!'
+    incorrect-usage: '&3Unrecognised argument please use &6/team transfer <player-name>&3.'
+  invite:
+    # Team Invite Messages
+    no-valid-player: '&3Please specify a player to invite!'
+    not-team-owner: '&3You must be a team owner to invite people!'
+    self-error: '&3You can''t invite yourself!'
+    invitee-not-found: '&3Player &6%INVITED% &3was not found, make sure they are online!'
+    invited-already-in-team: '&3Player &6%INVITED% &3is already in a team!'
+    max-size-reached: '&3You have reached the team members size limit &a%LIMIT%&3!'
+    successful: '&3You have invited &6%INVITED% &3to your team!'
+    failed: '&3Failed to send invite to &6%INVITED%&3, this player might already have an invitation!'
+    invite-pending: '&3You have been invited to a team by &6%TEAMOWNER% &3- use /team invite accept'
+    request: |-
+      &6%PLAYER% &3would like you to invite them to your team.
+      &3Use &6/team invite %PLAYER% &3to send the invite.
+    request-failed: '&3Failed to send request, check that the team owner is online!'
+    request-sent-successfully: '&3You have successfully sent a request to %TEAMOWNER%'
+    request-failed-own-team: '&3Failed to send request, this is YOUR team!'
+    request-failed-already-in-team: '&3Failed to send request, you are already in a team!'
+    deny-failed-no-invite: '&3Failed to deny invite - you don''t have an active invite.'
+    denied: '&3Invite successfully denied.'
+    denied-inviter: '&3%PLAYER% denied your invite.'
+    deny-fail: '&3Failed to deny the invite.'
+    received-message:
+    - '&7&m                                                    &r'
+    - '[Team Invitation](gold bold)'
+    - '[You''ve been invited to join](yellow) [%TEAM%](gold) [by](yellow) [%INVITER%](gold)'
+    - ''
+    - '[[✔ ACCEPT]](green bold run_command=/team invite accept hover=[Click to accept the invitation](green)) [[✔ DECLINE]](red bold run_command=/team invite deny hover=[Click to deny the invitation](red))'
+    - '&7&m                                                    &r'
+    error-invites-disabled: '[%NAME%](gold) [has invites disabled, you can''t invite him!](dark_aqua)'
+  join:
+    # Team Join Messages
+    successful: '&3Successfully joined &6%TEAM%&3!'
+    failed: '&3Failed to join &6%TEAM%&3'
+    failed-no-valid-team: '&3Failed to join a team - no team was found!'
+    failed-no-invite: '&3Failed to join a team - no invite was found!'
+    broadcast-chat: '&3The player &6%PLAYER%&3 has joined your team!'
+  leave:
+    # Team Leave Messages
+    failed-owner: '&3You are the owner of a team, use &6/team disband&3.'
+    successful: '&3You have left &6%TEAM%.'
+    failed: '&3Failed to leave team, please try again later.'
+    broadcast-chat: '&3The player &6%PLAYER%&3 has left your team!'
+  warp:
+    # Team Warp Messages
+    successful: '&3Successfully added team warp &6%WARP_NAME%&3!'
+    name-used: '&3A warp with that name already exists!'
+    limit-reached: '&3You have reached the team warps limit!'
+    deleted-successful: '&3Successfully deleted team warp &6%WARP_NAME%&3!'
+    not-found: '&3There is no warp with that name!'
+    cooldown-start: '&3You will be teleported in %SECONDS%s!'
+    teleported-successful: '&3Successfully teleported to the team warp!'
+    no-warps: '[Your team has no warps!](red)'
+    menu:
+      header:
+      - '[List of](dark_aqua) [%TEAM%](gold) [warps.](dark_aqua)'
+      - '[You can Hover each warp name to get details](dark_aqua)'
+      - ''
+      warp: '[[%WARP_NAME%]](#1055C9 hover=%WARP_INFO% run_command=/team warp %WARP_NAME%)'
+      warp-info:
+      - '[Left click to TP to](gray) [%WARP_NAME%](gold) [position](gray)'
+      - ''
+      - '[Coordinates:](gray) [X:](gray)[%X%](dark_aqua) [Y:](gray)[%Y%](dark_aqua) [Z:](gray)[%Z%](dark_aqua)'
+      - '[World:](gray) [%WORLD_NAME%](dark_aqua) [Server:](gray) [%SERVER_NAME%](dark_aqua)'
+  kick:
+    # Team Kick Messages
+    successful: '&3Player &6%KICKEDPLAYER%&3 was kicked from your team.'
+    kicked-player-message: '&3You were kicked from &6%TEAM%&3!'
+    target-not-in-team: '&3Player &6%KICKEDPLAYER%&3 is not in your team.'
+    player-not-found: '&3Could not find player &6%KICKEDPLAYER%&3. They may be have not joined before.'
+    must-be-owner: '&3You are not an owner of a team!'
+    incorrect-usage: '&3Unrecognised argument please use &6/team kick <member>&3.'
+    failed-cannot-kick-yourself: '&3You cannot kick yourself, use &6/team leave&3.'
+  prefix:
+    # Team Prefix Messages
+    change-successful: '&3Successfully changed team prefix to %TEAMPREFIX%&r&3!'
+    too-long: '&3Team prefix too long - maximum length is &6%CHARMAX% &3characters.'
+    too-short: '&3Team prefix too short - minimum length is &6%CHARMIN% &3characters.'
+    invalid-prefix: '&3Please provide a new prefix. Use &b/team prefix <prefix>&3!'
+    color-hint: '&7Tip: Use &e&& &7for color codes (e.g. &c&a for green) or &e# &7for hex colors (e.g. &#FF5555)'
+    already-taken: |-
+      &3Sorry but &6%TEAMPREFIX% &3is already taken.
+      &3Please choose another!
+    is-banned: |-
+      &3Sorry but &6%TEAMPREFIX% &3is a &cBANNED &3name!
+      &3Please choose another!
+    must-be-owner: '&3You are not an owner of a team!'
+    cannot-contain-colours: '&3Sorry, the team prefix cannot contain ''&'' or ''#'' characters.'
+  motd:
+    # Team MOTD Messages
+    cannot-contain-colours: '&3Sorry, the team MOTD cannot contain ''&'' or ''#'' characters.'
+    change-successful: '&3Successfully changed team MOTD to: %MOTD%&r&3!'
+    not-valid: '&3The team MOTD contains invalid characters!'
+    disabled: '&3Successfully disabled the team MOTD.'
+    not-set: '&3Team MOTD not set.'
+    too-long: '&3Team MOTD too long - maximum length is &6%CHARMAX% &3characters.'
+    too-short: '&3Team MOTD too short - minimum length is &6%CHARMIN% &3characters.'
+  list:
+    # Team List Messages
+    no-teams: |-
+      &3No teams found!
+      &3Create one using &b/team create <name>&3!
+    header: |
+      &7----- &6TeamsList &7-----&r
+      &3&lCurrent teams:&r
+    footer: '&7-----'
+  info:
+    # Team Info Messages
+    header: |-
+      &7----- &6TeamInfo &7-----&r
+      &3Name: %TEAM%&r
+      &3Prefix: &7(%TEAMPREFIX%&r&7)&r
+    owner-online: '&3Owner: &a%OWNER%'
+    owner-offline: '&3Owner: &c%OWNER%&7&o(offline)'
+    members-header: '&3Members: &3&o(%NUMBER%)'
+    managers-header: '&3Managers: &3&o(%NUMBER%)'
+    members-online: '&a%MEMBER%'
+    members-offline: '&c%MEMBER% &7&o(offline)'
+    allies-header: '&3Allied Teams:'
+    ally-list-entry: '&a%ALLYTEAM%'
+    ally-list-not-found: '&aAlly not found'
+    enemies-header: '&3Enemy Teams:'
+    enemy-list-entry: '&c%ENEMYTEAM%'
+    enemy-list-not-found: '&aEnemy not found'
+    join-fee: '&3Join Fee: &a%AMOUNT%'
+    motd: '&3MOTD: &a%MOTD%'
+    pvp-enabled: '&3Friendly Fire: &a&oENABLED'
+    pvp-disabled: '&3Friendly Fire: &c&oDISABLED'
+    home-set: '&3Home Set: &a&oTRUE'
+    home-not-set: '&3Home Set: &c&oFALSE'
+    bank-amount: '&3Bank Amount: &6%AMOUNT%'
+    footer: '&7-----'
+    not-in-team: '&3You are not in a team!'
+  ally:
+    # Team Ally Messages
+    added-successful: '&3You successfully added &6%ALLYTEAM% &3to your allies!'
+    added-notification: '&6%TEAMOWNER% &3has added your team to their allies!'
+    failed-to-add: '&3Unable to add &6%ALLYTEAM%&3! Make sure the owner is online!'
+    failed-already-ally: '&3This team is already your ally!'
+    failed-player-not-owner: '&6%ALLYOWNER%&3 is not a team owner!'
+    removed-successful: '&3You Successfully removed &6%ALLYTEAM% &3from your allies!'
+    removed-owner-notification: '&3Your team owner has removed &6%TEAM% &3from your allies!'
+    removed-other-notification: '&3The team &6%TEAM% &3has removed your team from their allies!'
+    failed-to-remove: '&3Unable to remove &6%ALLYOWNER%&3! Make sure they''re your ally'
+    add-owner-offline: '&3Unable to add &6%ALLYTEAM%&3! Make sure the owner is online!'
+    remove-owner-offline: '&3Unable to remove &6%ALLYTEAM%&3! Make sure the owner is online!'
+    incorrect-usage: '&3Unrecognised argument please use &6/team ally [add|remove] <team-owner>&3.'
+    failed-cannot-ally-self: '&3You cannot be an ally with your &3&lOWN&r&3 team!'
+    max-amount-reached: '&3You have reached the team allies amount limit &a%LIMIT%&3!'
+    failed-cannot-ally-enemy: '&3You cannot be an ally with an &c&lENEMY&r &3team!'
+  enemy:
+    # Team Enemy Messages
+    added-successful: '&3You successfully added &6%ENEMYTEAM% &3to your enemies!'
+    added-notification: '&6%TEAMOWNER% &3has added your team to their enemies!'
+    failed-to-add: '&3Unable to add &6%ENEMYOWNER%&3! Make sure the owner is online!'
+    failed-already-enemy: '&3This team is already your enemy!'
+    failed-player-not-owner: '&6%ENEMYOWNER%&3 is not a team owner!'
+    removed-successful: '&3You Successfully removed &6%ENEMYTEAM% &3from your enemies!'
+    removed-notification: '&3The team &6%TEAMOWNER% &3has removed your team from their enemies!'
+    failed-to-remove: '&3Unable to remove &6%ENEMYTEAM%&3! Make sure they''re your enemy!'
+    add-owner-offline: '&3Unable to add &6%ENEMYTEAM%&3! Make sure the owner is online!'
+    remove-owner-offline: '&3Unable to remove &6%ENEMYTEAM%&3! Make sure the owner is online!'
+    incorrect-usage: '&3Unrecognised argument please use &6/team enemy [add|remove] <team-owner>&3.'
+    failed-cannot-enemy-self: '&3You cannot be an enemy with your &3&lOWN&r&3 team!'
+    max-amount-reached: '&3You have reached the team enemies amount limit &a%LIMIT%&3!'
+    failed-cannot-enemy-ally: '&3You cannot be an enemy with an &a&lALLIED&r &3team!'
+    war-declared-title-1: '&c&lYOUR TEAM IS NOW AT WAR WITH:'
+    war-declared-title-2: '&6%TEAMOWNER%''s &cTeam!'
+    peace-declared-title-1: '&a&lYOUR TEAM IS NO LONGER AT WAR WITH:'
+    peace-declared-title-2: '&6%TEAMOWNER%''s &aTeam!'
+    war-received-title-1: '&c&lYOUR TEAM IS NOW AT WAR WITH:'
+    war-received-title-2: '&6%TEAMOWNER%''s &cTeam!'
+    peace-received-title-1: '&a&lYOUR TEAM IS NO LONGER AT WAR WITH:'
+    peace-received-title-2: '&6%TEAMOWNER%''s &aTeam!'
+  pvp:
+    # Team Friendly Fire
+    enabled: |-
+      &3You successfully &aenabled &3friendly fire.
+      &3Your team members can now pvp each other!
+    disabled: |-
+      &3You successfully &cdisabled &3friendly fire.
+      &3Your team members can no longer pvp each other!
+    failed-not-in-team: '&3You need to be in a team first! Use &6/team &3for details how.'
+    is-disabled: '&3Your team has friendly fire disabled.'
+    is-disabled-for-allies: '&3You can''t hurt a member of an allied team!'
+  home:
+    # Team Homes
+    set-successful: '&3You &aSuccessfully &3set the team home to your current location!'
+    delete-successful: '&3You &aSuccessfully &3deleted the team home!'
+    cooldown-wait: '&3Sorry, you can''t use that again for another &6%TIMELEFT%&r &3seconds.'
+    cooldown-start: '&3You will be teleported in %SECONDS%s!'
+    teleport-successful: '&3You teleported to your team''s home.'
+    no-home-set: '&3Your team does not have a home set!'
+    failed-not-in-team: '&3You need to be in a team first! Use &6/team &3for details how.'
+  chat:
+    # Team Chat
+    failed-not-in-team: '&3You need to be in a team first! Use &6/team &3for details how.'
+    cooldown-wait: '&3Sorry, you can''t use that again for another &6%TIMELEFT%&r &3seconds.'
+    toggle-on: '&3Toggled Team Chat &a&lON&3.'
+    toggle-off: '&3Toggled Team Chat &c&lOFF&3.'
+    spy-toggle-on: '&3Toggled Team Chat spy &a&lON&3.'
+    spy-toggle-off: '&3Toggled Team Chat spy &c&lOFF&3.'
+  allychat:
+    incorrect-usage: |-
+      &6UltimateTeams team chat usage:&3
+      /allychat <message>
+    toggle-on: '&3Toggled Ally Chat &a&lON&3.'
+    toggle-off: '&3Toggled Ally Chat &c&lOFF&3.'
+  manager:
+    # Team Managers
+    promote-self-error: '&3You can''t promote yourself!'
+    promote-successful: '&3Player &6%PLAYER%&3 has been successfully promoted to team manager.'
+    demote-self-error: '&3You can''t demote yourself!'
+    demote-successful: '&3Player &6%PLAYER%&3 has been successfully demoted.'
+  permission:
+    # Team permissions
+    not-found: '&3The permission %PERM% doesn''t exist.'
+    added-successful: '&3The permission &6&l%PERM% &3has been successfully added.'
+    removed-successful: '&3The permission &6&l%PERM% &3has been successfully removed.'
+  echest:
+    # Team Ender Chest Messages
+    opened: '&3Opened team ender chest #%NUMBER%'
+    not-exist: '&cTeam ender chest #%NUMBER% does not exist!'
+  fee:
+    # Fee
+    current: '[The fee to join your team is set to:](dark_aqua) [%AMOUNT%](gold)'
+    disable: |-
+      [You have disabled the team fee!](dark_aqua)
+      [new players will now join the team for free!](dark_aqua)
+    success: '[You have successfully set the team fee to:](dark_aqua) [%AMOUNT%](gold)'
+    amount-too-big: '[The fee value exceeds the maximum limit, which is:](dark_aqua) [%AMOUNT%](gold)'
+    cant-join-not-enough-money: '[You can''t join](dark_aqua) [%TEAM%](gold) [Because you don''t have enough money to pay the join fee. The join fee is:](dark_aqua) [%AMOUNT%](gold)'
+    fee-deposited: '[%PLAYER%](gold) [has deposited his join fee](dark_aqua) [(](dark_aqua)[%AMOUNT%](gold)[)](dark_aqua) [in the team bank](dark_aqua)'
+invites:
+  # Invites
+  invites-disabled: |-
+    [Invites successfully disabled!](green)
+     [Players can't invite you in their teams anymore.](dark_aqua)
+  invites-enabled: |-
+    [Invites successfully enabled!](green)
+     [Players can now invite you in their teams.](dark_aqua)
+economy:
+  # Economy
+  not-enough-money: '&3You don''t have enough money for this action. Required balance is: &6%MONEY%'
+  invalid-amount: '[%MONEY%](gold) [is not a valid amount](dark_aqua)'
+  deposited: '[You have successfully deposited](dark_aqua) [%CURRENCY%%MONEY%](gold) [in the team bank](dark_aqua)'
+  withdraw:
+    success: '[You have successfully withdrawn](dark_aqua) [%CURRENCY%%MONEY%](gold) [from the team bank](dark_aqua)'
+    # You can use %MONEY% to display the amount in this message.
+    not-enough-funds: '[The team bank does not have enough funds!](dark_aqua)'
+general:
+  # General Plugin Messages
+  no-colour-permission: '&3You don''t have the required permission to use color codes'
+  player-not-found: '&3The player doesn''t exist.'
+  must-be-owner: '&3You must be the team owner to do this.'
+  team-not-found: '&3The team doesn''t exist.'
+  function-disabled: '&3Sorry, that has been disabled. :('
+  no-permission: '&cYou don''t have permission to do that.'
+  plugin-reload-begin: '&6UltimateTeams: &aBeginning plugin reload...'
+  plugin-reload-successful: '&6UltimateTeams: &aThe plugin has been successfully reloaded!'
+  incorrect-command-usage: '&3Unrecognised argument please use &6/team&3.'
+  player-only-command: '&4Sorry, that command can only be run by a player!'
+  invite-wipe-started: '&6UltimateTeams: &aAuto invite wipe task has started.'
+  invite-wipe-complete: '&6UltimateTeams: &aCleared all outstanding team invites!'
+  invite-wipe-failed: '&6UltimateTeams: &cFailed to clear all outstanding team invites!'
+admin:
+  disband:
+    # Admin Disband Messages
+    failure: '&3Failed to disband team - make sure that the provided player is a team owner!'
+    incorrect-usage: '&3Unrecognised argument please use &6/teamadmin disband <team-owner>&3.'
+  echest:
+    # Admin Ender Chest Messages
+    added: '&aAdded ender chest #%NUMBER% with %ROWS% rows to team %TEAM%'
+    removed: '&aRemoved ender chest #%NUMBER% from team %TEAM%'
+    rows-added: '&aAdded %ROWS% rows to chest #%NUMBER% (now %TOTAL% rows / %SLOTS% slots) for team %TEAM%'
+    page-added: '&aAdded %TYPE% page #%NUMBER% (%ROWS% rows / %SLOTS% slots) to team %TEAM%'
+    backup:
+      # Admin Ender Chest Rollback Messages
+      list-header: '&6&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+      list-title: '&e&lEnder Chest #%CHEST% Backups'
+      list-team: '&7Team: &f%TEAM%'
+      list-entry: '&e#%NUMBER% &7- &f%TIMESTAMP% &7(%TIMEAGO%)'
+      list-footer-admin: '&7Use &e/ta echest rollback <team> %CHEST% <backup#> &7to restore'
+      list-footer-force: '&7Use &e/ta echest forcerollback <team> %CHEST% <backup#> &7to force restore'
+      no-backups: '&cNo backups available for chest #%CHEST%'
+    rollback:
+      success: '&a✓ Successfully rolled back Ender Chest #%CHEST%!'
+      success-admin: '&a✓ Successfully rolled back Ender Chest #%CHEST% for team %TEAM%!'
+      restored-from: '&7Restored from: &f%TIMESTAMP% &7(%TIMEAGO%)'
+      failed: '&c✗ Failed to rollback Ender Chest #%CHEST%!'
+      invalid-backup: '&cBackup #%NUMBER% does not exist! Only %TOTAL% backup(s) available.'
+      broadcast: '&e&l[!] &eTeam Ender Chest #%CHEST% has been rolled back by %PLAYER%'
+      admin-broadcast: '&c&l[!] &cADMIN ALERT: &eTeam Ender Chest #%CHEST% has been rolled back by an administrator'
+      force-warning: '&c&l⚠ FORCE ROLLBACK - Team was not notified'
+    all-backup:
+      success: '&a✓ Successfully backed up all %COUNT% ender chest(s) for team %TEAM%!'
+      no-chests: '&eTeam %TEAM% has no ender chests to backup.'
+    remove-row:
+      success: '&a✓ Removed %ROWS% row(s) from chest #%CHEST% for team %TEAM%'
+      new-size: '&7New size: %NEW_ROWS% rows (%SLOTS% slots)'
+      warning: '&c⚠ Warning: Items in removed slots will be lost!'
+      invalid: '&cCannot remove %ROWS% rows! Chest #%CHEST% only has %CURRENT_ROWS% rows.'
+      minimum: '&eMinimum is 1 row. Use &6/ta removechest %TEAM% %CHEST% &eto delete the entire chest.'
+commands:
+  # /team Command Responses
+  team-help:
+  - '&6UltimateTeams usage:&3'
+  - /team create <name>
+  - /team disband
+  - /team invite accept/deny/send <player>
+  - /team leave
+  - /team kick <player>
+  - /team info
+  - /team list
+  - /team prefix <prefix>
+  - /team transfer <player-name>
+  - /team ally [add|remove] <team-owner>
+  - /team enemy [add|remove] <team-owner>
+  - /team pvp
+  - /team [sethome|delhome|home]
+  - /team promote <player>
+  - /team demote <player>
+  - /team permissions add <permission>
+  - /team permissions remove <permission>
+  - /team echest [number]
+  - ''
+  # /teamadmin Command Responses
+  admin-help:
+  - '&6UltimateTeams Admin usage:&3'
+  - /teamadmin save
+  - /teamadmin reload
+  - /teamadmin disband <team-owner>
+  - /teamadmin about
+  - /teamadmin see <team-name> <chest-number>
+  - /teamadmin addechest <team-name> <rows|chest|doublechest>
+  - /teamadmin removeechest <team-name> <chest-number>
+  - /teamadmin listechests <team-name>
+  - /teamadmin echest backups <team-name> <chest-number>
+  - /teamadmin echest rollback <team-name> <chest-number> <backup#>
+  - /teamadmin echest forcerollback <team-name> <chest-number> <backup#>
+  - /teamadmin echest allbackup <team-name>
+  - /teamadmin removerow <team-name> <chest-number> <rows>
+  - /teamadmin removechest <team-name> <chest-number>

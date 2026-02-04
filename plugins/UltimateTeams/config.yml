@@ -1,0 +1,217 @@
+gui:
+  # ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+  # ┃     UltimateTeams Config     ┃
+  # ┃      Developed by xF3d3      ┃
+  # ┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+  # ┃
+  # ┗╸ Information: https://modrinth.com/plugin/ultimate-teams
+  # Do you want to use the GUI system? [Default value: true]
+  enable: true
+  # Should the plugin open the team list GUI instead of sending chat message when /team list is used? [Default value: false]
+  use-gui-for-team-list: false
+database:
+  # Type of database to use (SQLITE, H2, MYSQL, MARIADB, or POSTGRESQL). MARIADB is preferred over MYSQL. H2 is preferred over SQLITE
+  type: SQLITE
+  mysql:
+    credentials:
+      # Specify credentials here if you are using MYSQL as your database type
+      host: localhost
+      port: 3306
+      database: ultimate_teams
+      username: root
+      password: pa55w0rd
+      parameters: ?autoReconnect=true&useSSL=false&useUnicode=true&characterEncoding=UTF-8
+    connection_pool:
+      # MYSQL / MARIADB / POSTGRESQL database connection pool properties. Don't modify this unless you know what you're doing!
+      size: 12
+      idle: 12
+      lifetime: 1800000
+      keepalive: 30000
+      timeout: 20000
+  # Names of tables to use on your database. Don't modify this unless you know what you're doing!
+  table_names:
+    user_data: ultimateteams_users
+    team_data: ultimateteams_teams
+cross-server:
+  # Whether enable cross-server mode. You must use MYSQL/MARIADB/POSTGRESQL to use cross-server
+  enable: false
+  # The name of the server as it appears on Bungee/Velocity (case-sensitive)
+  server-name: Survival
+  # The cluster ID, for if you're networking multiple separate groups of UltimateTeams-enabled servers. Do not change unless you know what you're doing
+  cluster-id: main
+  # Type of network message broker to ues for data synchronization (PLUGIN_MESSAGE or REDIS). Always use REDIS if possible.
+  broker: PLUGIN_MESSAGE
+  redis:
+    # Settings for if you're using REDIS as your message broker
+    host: localhost
+    port: 6379
+    password: ''
+    use-ssl: false
+# Hook into luckperms to create contexts (e.g. is-in-team) [Default value: false]. Needs LuckPerms
+luckperms-hook: false
+# use HuskHomes to teleport players instead of built-in teleport handler [Default value: true]
+use-huskhomes: false
+# Hook into floodgate to handle bedrock players properly [Default value: false]. Needs FloodGate
+floodgate-hook: false
+placeholder:
+  # When the placeholder would be blank, the text below will be shown instead (you can use color codes)
+  not-in-a-team: Not in a team
+team:
+  name:
+    # Whether to allow color codes (& and #) in the teams name
+    allow-color-codes: false
+    # If enabled, players need the ultimateteams.team.create.usecolors permission to use color codes
+    require-perm-for-color-codes: false
+    min-length: 4
+    max-length: 10
+    regex:
+      # If enabled, the team name will need to additionally pass the regex in order to be used. Advanced users only.
+      enable: false
+      value: '[a-zA-Z]+'
+  join:
+    # Do you want a message to be sent to team players when a player joins a team? [Default value: true]
+    announce: true
+  leave:
+    # Do you want a message to be sent to team players when a player leaves a team? [Default value: true]
+    announce: true
+  size:
+    # Set the default maximum amount of members that can join a players' team. [Default value: 8]
+    default-max-team-size: 8
+    # If true, the default members limit will be stacked with permission limit.
+    # If a player has ultimateteams.max_members.2 and the default limit is 8, he will be able to have 10 members. otherwise only 2.
+    stack-members: false
+  home:
+    # Enable the '/team [sethome|home]' system. [Default value: true]
+    enabled: true
+    # Define the delay (cooldown) in seconds before the tp starts.
+    # This value has no effect if using HuskHomes as teleport handler
+    tp-delay: 3
+    cool-down:
+      # Enable the cool down on the '/team warp <name>' command to prevent tp spamming (RECOMMENDED). [Default value: true]
+      enabled: true
+      # Cool-down time in seconds. [Default value: 120 = 2 minutes]
+      time: 120
+  pvp:
+    # Globally enable the team friendly fire system (the friendly fire is disabled by default in new teams). [Default value: true]
+    enabled: true
+    # Enable the ability for a player to bypass the pvp protection using 'ultimateteams.bypass.pvp'. [Default value: true]
+    bypass-permission: true
+    # If this is enabled, new teams will have PvP (friendly fire) enabled by default. [Default value: false]
+    default-allow-pvp: false
+  warp:
+    # Enable the '/team [setwarp|warp]' system. [Default value: true]
+    enable: true
+    # Define the delay (cooldown) in seconds before the tp starts.
+    # This value has no effect if using HuskHomes as teleport handler
+    tp-delay: 3
+    # Decide how many warps a team owner can set.
+    # Can be overwritten by ultimateteams.max_warps.<number>
+    limit: 2
+    # If true, the default warp limit will be stacked with permission limit.
+    # If a player has ultimateteams.max_warps.3 and the default limit is 2, he will be able to set 5 warps.
+    stack-warps: false
+    cool-down:
+      # Enable the cool down on the '/team warp <name>' command to prevent tp spamming (RECOMMENDED). [Default value: true]
+      enabled: true
+      # Cool-down time in seconds. [Default value: 120 = 2 minutes]
+      time: 120
+  chat:
+    # Enable the team chat system. [Default value: true]
+    enabled: true
+    # Below is the prefix for the team chat messages. (Placeholders: %TEAM% %PLAYER%)
+    prefix: '&6[&3TC&6]&r'
+  allies:
+    # Set the maximum amount of allied teams that can a team can have. [Default value: 4]
+    max-allies: 4
+    chat:
+      # Enable the team ally chat system. [Default value: true]
+      enabled: true
+      # Below is the prefix for the team ally chat messages. (Placeholders: %TEAM% %PLAYER%)
+      prefix: '&6[&eAC&6]&r'
+  enemies:
+    # Set the maximum amount of enemies teams that can a team can have. [Default value: 2
+    max-enemies: 2
+  tag:
+    # Whether to allow color codes (& and #) in the teams tag
+    allow-color-codes: true
+    # If enabled, players need the ultimateteams.team.tag.usecolors permission to use color codes
+    require-perm-for-color-codes: false
+    # Set the minimum length of the team prefix. [Default value: 3]
+    min-length: 3
+    # Set the minimum length of the team prefix. [Default value: 8]
+    max-length: 8
+    regex:
+      # If enabled, the team prefix will need to additionally pass the regex in order to be used. Advanced users only.
+      enable: false
+      value: '[a-zA-Z]+'
+    # Set below names that are not allowed to be used in prefixes or names. [They are NOT casesensitive]
+    disallowed-tags:
+    - Gamers
+    - Rise
+    - Up
+    # Add a space after the team prefix in chat. [Default value: false].
+    prefix-add-space-after: false
+    # Add `[]` characters before and after the team prefix in the chat. [Default value: false]
+    prefix-add-brackets: false
+    # Below is how the above brackets should appear.
+    brackets-opening: '&f['
+    brackets-closing: '&f]'
+  motd:
+    # Should players be allowed to set a MOTD for their team?
+    enable: true
+    # Should players be be sent the team MOTD when they join the team?
+    send-on-join: true
+    allow-colors: false
+    # If enabled, players will need the ultimateteams.team.motd.usecolors permission to use color codes
+    colors-require-perm: false
+    length:
+      min: 5
+      max: 30
+    regex:
+      # If enabled, the MOTD will need to pass the regex in order to be used. Advanced users only.
+      enable: false
+      value: '[a-zA-Z]+'
+  echest:
+    # Enable the team enderchest system. [Default value: true]
+    # This is not compatible with cross-server (yet).
+    # If you are currently on 1.21.4 or below, and you want to update your server remember to migrate the team enderchests (guide in the docs)
+    enabled: true
+    # How many rows will the default enderchest have? [Default value: 3]
+    # Value can go from 1 to 6, being 3 a normal chest and 6 a double chest
+    rows: 3
+    # ONLY FOR SERVERS WHO JUST UPDATED TO A VERSION THAT SUPPORTS THIS FEATURE!
+    # Should the plugin add an enderchest to each team on startup? [Default value: false]
+    # Since teams created before this version didn't have enderchests, add one.
+    # AFTER A FULL STARTUP DISABLE THIS AND RESTART THE SERVER!
+    migrate: false
+chat:
+  chat-spy:
+    # Do you want players with the perm 'ultimateteams.chat.spy' be able to spy on all team chat messages? [Default value: true]
+    enabled: true
+    # Below is the prefix for th chat spy messages. [Default value: &6[&cSPY&6]&r]
+    prefix: '&6[&cSPY&6]&r'
+economy:
+  # Whether to enable economy (Vault is required). Changes might require to restart the server
+  enable: false
+  team-create:
+    # Should players pay to create a team?
+    enabled: false
+    # The cost to create a team
+    cost: 100.0
+  team-join-fee:
+    # Should players be allowed to ask who joins a team a fee (that will be deposited in the team bank)?
+    enabled: false
+    # The default cost of the join fee
+    default: 100.0
+    # The max cost of the join fee
+    max-fee: 10000.0
+plugin-update-notifications:
+  # Do you want to enable in game plugin update notifications? (Permission:'ultimateteams.update'). [Default value: true]
+  enabled: true
+general:
+  # Do you want to enable the plugins ability to auto-wipe the invites list? [Default value: true]
+  run-auto-invite-wipe-task: true
+  # Do you want the plugin to send a message in console when it does the auto-wipe of the invites list? [Default value: true]
+  run-auto-invite-wipe-task-log: true
+  # Do you want to see a lot of debug messages in console when most actions are performed? [Default value: false]
+  developer-debug-mode: false

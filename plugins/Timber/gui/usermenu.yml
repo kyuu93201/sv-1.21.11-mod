@@ -1,0 +1,46 @@
+# #------------------------------------------------------------------------------------------
+# #                 author: Imperialroma10
+# #     our project: https://modrinth.com/user/imperialroma10                
+# #------------------------------------------------------------------------------------------
+# #            Our Minecraft community is waiting for you 
+# #              Discord : http://discord.gg/fsEZEnE58g
+# #------------------------------------------------------------------------------------------
+# #              If you like our plugin support us with a cup of coffee
+# #             Donate:   https://www.patreon.com/c/PluginDEV/membership
+#     
+#             If you need a custom plugin, please contact us on Discord!
+# #------------------------------------------------------------------------------------------
+
+treecuting:
+  disable:
+    title: '&bProperty: &3Tree cutting'
+    lore:
+    - '  '
+    - '&7Status: &4Disable'
+    - '&7Disable instant tree cutting'
+  enable:
+    lore:
+    - '  '
+    - '&7Status: §aEnable'
+    - '&7Enable instant tree cutting'
+    title: '&bProperty: &3Tree cutting'
+gui:
+  logscount:
+    title: '&eYou cut down {count} logs'
+    lore:
+    - ''
+    - '&7the logger rankings are coming up.'
+  # Works only after server reboot
+  # the rest is reloaded with the /timber reload command
+  title: User menu
+effects:
+  descriptionnotselected:
+  - '  '
+  - '&7Left click to open Effects menu'
+  descriptionselected:
+  - '  '
+  - '&7Right click to remove particle'
+  selectmessage: '§bYou select particle: &a{particle}'
+  description: '&bSelected particle: &a{particle}'
+  title: '&eEffects'
+norightmessage: '&4No rights.'

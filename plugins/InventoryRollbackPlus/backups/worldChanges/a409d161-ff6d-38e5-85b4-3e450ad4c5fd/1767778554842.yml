@@ -1,0 +1,11 @@
+xp: 0.0
+health: 20.0
+hunger: 20
+saturation: 5.0
+location:
+  world: world_nether
+  x: -93.0
+  y: 49.2
+  z: 168.7
+logType: WORLD_CHANGE
+version: v1_21_R8
